@@ -5,8 +5,8 @@ import DetailsSection from '@/components/DetailsSection';
 import WhatYouWillGet from '@/components/WhatYouWillGet';
 import InvitationForm from '@/components/InvitationForm';
 
-export default async function Home({ params }: { params: Promise<{ lang: Lang }> }) {
-  const { lang } = await params;
+export default async function Home({ params }: { params: Promise<{ lang: string }> }) {
+  const { lang } = await params as { lang: Lang };
   const content = getContent(lang);
 
   return (
