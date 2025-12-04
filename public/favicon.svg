@@ -1,0 +1,30 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Outer emerald circle -->
+  <circle cx="100" cy="100" r="95" fill="#10B981"/>
+
+  <!-- Inner darker emerald circle -->
+  <circle cx="100" cy="100" r="85" fill="#059669" opacity="0.8"/>
+
+  <!-- Light accent dots -->
+  <circle cx="175" cy="25" r="6" fill="#D1FAE5" />
+  <circle cx="25" cy="175" r="6" fill="#D1FAE5" />
+
+  <!-- Abstract teaching/learning symbol -->
+  <path d="M110 50 C 130 50, 140 100, 100 120 L 70 150 L 70 90 C 70 70, 90 50, 110 50 Z"
+        fill="white"
+        stroke="#D1FAE5"
+        stroke-width="4"/>
+
+  <!-- Small light bulb/idea accent -->
+  <g transform="translate(85, 85) scale(0.18)">
+    <circle cx="120" cy="50" r="10" fill="#FBBF24" />
+    <path d="M100 0 C 40 10, 20 80, 50 150 C 120 200, 180 140, 150 80 C 140 50, 110 0, 100 0 Z"
+          fill="#D1FAE5"
+          stroke="#059669"
+          stroke-width="5"/>
+  </g>
+
+  <!-- Teaching pointer/gesture -->
+  <path d="M120 125 C 140 125, 145 140, 130 150 L 115 145 C 110 140, 110 130, 120 125 Z"
+        fill="#059669" />
+</svg>
