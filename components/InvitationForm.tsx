@@ -48,21 +48,23 @@ export default function InvitationForm({ content }: InvitationFormProps) {
   return (
     <section
       id="invitation-form"
-      className="py-16 bg-gray-900"
+      className="py-20 bg-emerald-50"
       aria-labelledby="invitation-form-heading"
     >
       <div className="max-w-xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-white p-8 sm:p-10 rounded-xl shadow-2xl">
+        <div className="bg-white p-8 sm:p-10 rounded-2xl shadow-2xl border border-gray-100 relative overflow-hidden">
+          <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-emerald-400 to-emerald-600"></div>
           <h2
             id="invitation-form-heading"
-            className="text-3xl font-extrabold text-gray-900 mb-8 text-center"
+            className="text-3xl font-extrabold text-gray-900 mb-2 text-center"
           >
             {content.title}
           </h2>
+          <p className="text-center text-gray-500 mb-8">Spots are limited for this research phase.</p>
 
           {isSuccess && (
             <div
-              className="mb-6 p-4 bg-emerald-50 border-2 border-emerald-500 rounded-lg text-center"
+              className="mb-6 p-4 bg-emerald-50 border-l-4 border-emerald-500 rounded-lg text-center"
               role="alert"
               aria-live="polite"
             >
@@ -80,11 +82,11 @@ export default function InvitationForm({ content }: InvitationFormProps) {
             </div>
           )}
 
-          <form onSubmit={handleSubmit} className="space-y-4">
+          <form onSubmit={handleSubmit} className="space-y-5">
             <div>
               <label
                 htmlFor="name"
-                className="block text-sm font-medium text-gray-700"
+                className="block text-sm font-semibold text-gray-700 mb-1"
               >
                 {content.nameLabel}
               </label>
@@ -93,7 +95,7 @@ export default function InvitationForm({ content }: InvitationFormProps) {
                 id="name"
                 name="name"
                 required
-                className="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-emerald-500 focus:border-emerald-500 text-base"
+                className="block w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition outline-none"
                 aria-required="true"
               />
             </div>
@@ -101,7 +103,7 @@ export default function InvitationForm({ content }: InvitationFormProps) {
             <div>
               <label
                 htmlFor="email"
-                className="block text-sm font-medium text-gray-700"
+                className="block text-sm font-semibold text-gray-700 mb-1"
               >
                 {content.emailLabel}
               </label>
@@ -110,7 +112,7 @@ export default function InvitationForm({ content }: InvitationFormProps) {
                 id="email"
                 name="email"
                 required
-                className="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-emerald-500 focus:border-emerald-500 text-base"
+                className="block w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition outline-none"
                 aria-required="true"
               />
             </div>
@@ -118,7 +120,7 @@ export default function InvitationForm({ content }: InvitationFormProps) {
             <div>
               <label
                 htmlFor="phone"
-                className="block text-sm font-medium text-gray-700"
+                className="block text-sm font-semibold text-gray-700 mb-1"
               >
                 {content.phoneLabel}
               </label>
@@ -127,7 +129,7 @@ export default function InvitationForm({ content }: InvitationFormProps) {
                 id="phone"
                 name="phone"
                 required
-                className="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-emerald-500 focus:border-emerald-500 text-base"
+                className="block w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition outline-none"
                 aria-required="true"
               />
             </div>
@@ -136,7 +138,7 @@ export default function InvitationForm({ content }: InvitationFormProps) {
               <div>
                 <label
                   htmlFor="age"
-                  className="block text-sm font-medium text-gray-700"
+                  className="block text-sm font-semibold text-gray-700 mb-1"
                 >
                   {content.ageLabel}
                 </label>
@@ -146,7 +148,7 @@ export default function InvitationForm({ content }: InvitationFormProps) {
                   name="age"
                   min="55"
                   required
-                  className="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-emerald-500 focus:border-emerald-500 text-base"
+                  className="block w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition outline-none"
                   aria-required="true"
                   placeholder="55+"
                 />
@@ -155,7 +157,7 @@ export default function InvitationForm({ content }: InvitationFormProps) {
               <div>
                 <label
                   htmlFor="location"
-                  className="block text-sm font-medium text-gray-700"
+                  className="block text-sm font-semibold text-gray-700 mb-1"
                 >
                   {content.locationLabel}
                 </label>
@@ -164,7 +166,7 @@ export default function InvitationForm({ content }: InvitationFormProps) {
                   id="location"
                   name="location"
                   required
-                  className="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-emerald-500 focus:border-emerald-500 text-base"
+                  className="block w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition outline-none"
                   aria-required="true"
                 />
               </div>
@@ -174,7 +176,7 @@ export default function InvitationForm({ content }: InvitationFormProps) {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-emerald-600 hover:bg-emerald-700 disabled:bg-gray-400 text-white font-bold py-3 rounded-xl text-lg uppercase tracking-wider shadow-lg transition-all duration-200 hover:shadow-xl hover:-translate-y-0.5 focus:outline-none focus-visible:ring-4 focus-visible:ring-emerald-300 disabled:cursor-not-allowed"
+                className="w-full bg-emerald-600 hover:bg-emerald-700 disabled:bg-gray-400 text-white font-bold py-4 rounded-xl text-lg uppercase tracking-wider shadow-lg hover:shadow-emerald-500/30 transition transform hover:-translate-y-0.5 focus:outline-none focus-visible:ring-4 focus-visible:ring-emerald-300 disabled:cursor-not-allowed"
                 aria-label={content.submitButton}
               >
                 {isSubmitting ? '...' : content.submitButton}
