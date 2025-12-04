@@ -12,7 +12,7 @@ export default function Hero({ content, lang }: HeroProps) {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/hero-image.jpg"
+          src="/imageBerni1.jpg"
           alt="Senior couple using tablet for English conversation practice"
           fill
           className="object-cover object-center"
