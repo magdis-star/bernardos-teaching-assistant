@@ -17,6 +17,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
         <DetailsSection
           whyThisWorks={content.whyThisWorks}
           whoWeAreLookingFor={content.whoWeAreLookingFor}
+          lang={lang}
         />
         <WhatYouWillGet content={content.whatYouWillGet} />
         <InvitationForm content={content.form} lang={lang} />

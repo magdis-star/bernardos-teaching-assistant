@@ -56,11 +56,10 @@ export default function InvitationForm({ content }: InvitationFormProps) {
           <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-emerald-400 to-emerald-600"></div>
           <h2
             id="invitation-form-heading"
-            className="text-3xl font-extrabold text-gray-900 mb-2 text-center"
+            className="text-3xl font-extrabold text-gray-900 mb-8 text-center"
           >
             {content.title}
           </h2>
-          <p className="text-center text-gray-500 mb-8">Spots are limited for this research phase.</p>
 
           {isSuccess && (
             <div

@@ -36,9 +36,13 @@ export default function Hero({ content, lang }: HeroProps) {
             id="hero-heading"
             className="text-4xl sm:text-5xl lg:text-7xl font-extrabold leading-tight mb-6 drop-shadow-lg"
           >
-            {content.headline.split('At Your Own Pace')[0]}
-            <span className="text-emerald-300">At Your Own Pace</span>
-            {content.headline.split('At Your Own Pace')[1]}
+            {lang === 'es' ? (
+              <>
+                Practica conversaciones en Inglés cuando quieras y — <span className="text-emerald-300">a tu ritmo, sin presión</span>
+              </>
+            ) : (
+              content.headline
+            )}
           </h1>
 
           {/* Subheading */}
@@ -48,7 +52,10 @@ export default function Hero({ content, lang }: HeroProps) {
 
           {/* CTA Subtext */}
           <p className="text-lg font-semibold mb-6 text-emerald-100">
-            Join our research study and get free access to your personal AI English tutor
+            {lang === 'es'
+              ? 'Únete a nuestro estudio de investigación y obtén acceso gratuito a tu tutor personal de inglés con IA'
+              : 'Join our research study and get free access to your personal AI English tutor'
+            }
           </p>
 
           {/* Primary CTA Button */}

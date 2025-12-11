@@ -43,7 +43,7 @@ export interface Content {
 export const content: Record<Lang, Content> = {
   en: {
     hero: {
-      headline: 'Practice English Conversation Anytime—At Your Own Pace, Without Pressure',
+      headline: 'Practice English Conversation Anytime—Without Pressure',
       subheading: 'An AI-powered English conversation tutor designed for learners aged 55+, offering naturally adaptive dialogues wherever you are, whenever you\'re ready.',
       cta: 'Request Your Invitation',
     },
@@ -109,16 +109,16 @@ export const content: Record<Lang, Content> = {
   },
   es: {
     hero: {
-      headline: 'Practica Conversación en Inglés Cuando Quieras—A Tu Ritmo, Sin Presión',
-      subheading: 'Un tutor de conversación en inglés con inteligencia artificial diseñado para estudiantes mayores de 55 años, que ofrece diálogos naturalmente adaptativos donde estés, cuando estés listo/a.',
-      cta: 'Solicita Tu Invitación',
+      headline: 'Practica conversaciones en Inglés cuando quieras y — a tu ritmo, sin presión',
+      subheading: 'Un tutor de conversación en inglés con inteligencia artificial diseñado para estudiantes de 55+ años, que ofrece diálogos naturalmente adaptativos donde estés, cuando estés listo/a.',
+      cta: 'Solicita tu invitación',
     },
     howItWorks: {
-      title: 'Cómo Funciona',
+      title: '¿Cómo Funciona?',
       steps: [
         {
-          title: 'Simplemente Empieza a Hablar',
-          description: 'No hay botones que pulsar, solo habla de forma natural',
+          title: 'Simplemente empieza a hablar',
+          description: 'Con solo pulsar un botón puedes hablar de forma natural',
         },
         {
           title: 'Recibe Apoyo Personalizado',
@@ -131,7 +131,7 @@ export const content: Record<Lang, Content> = {
       ],
     },
     whyThisWorks: {
-      title: 'Por Qué Funciona Para Ti',
+      title: '¿Por qué funcionará para ti?',
       benefits: [
         'Sin presión para seguir el ritmo',
         'Habla a un ritmo cómodo',
@@ -141,12 +141,11 @@ export const content: Record<Lang, Content> = {
       ],
     },
     whoWeAreLookingFor: {
-      title: 'A Quién Buscamos',
+      title: '¿A quién buscamos?',
       criteria: [
         '55 años o más',
         'Estudiando inglés (cualquier nivel es bienvenido)',
-        'Que tengas un smartphone (iPhone o Android)',
-        'Que vivas en Madrid o cerca',
+        'Que tengas un smartphone u ordenador',
         'Dispuesto/a a probar la app durante 4 semanas',
       ],
     },
@@ -154,9 +153,9 @@ export const content: Record<Lang, Content> = {
       title: 'Qué Recibirás',
       benefits: [
         'Acceso gratuito a la aplicación',
-        'Sesión de bienvenida personal',
+        'Sesión de bienvenida y de formación',
         'Apoyo continuo durante el estudio',
-        'Contribución a investigación doctoral sobre aprendizaje de idiomas en mayores',
+        'Contribución a investigación doctoral sobre aprendizaje de idiomas en adultos mayores',
       ],
     },
     form: {

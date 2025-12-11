@@ -1,11 +1,12 @@
-import { Content } from '@/lib/content';
+import { Content, Lang } from '@/lib/content';
 
 interface DetailsSectionProps {
   whyThisWorks: Content['whyThisWorks'];
   whoWeAreLookingFor: Content['whoWeAreLookingFor'];
+  lang: Lang;
 }
 
-export default function DetailsSection({ whyThisWorks, whoWeAreLookingFor }: DetailsSectionProps) {
+export default function DetailsSection({ whyThisWorks, whoWeAreLookingFor, lang }: DetailsSectionProps) {
   return (
     <section className="py-20 bg-emerald-50" aria-label="Details">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -15,7 +16,12 @@ export default function DetailsSection({ whyThisWorks, whoWeAreLookingFor }: Det
           <div className="lg:col-span-7 flex flex-col gap-6">
             <div className="mb-2">
               <h2 className="text-3xl font-extrabold text-gray-900">{whyThisWorks.title}</h2>
-              <p className="text-gray-500 mt-2">Designed to eliminate stress and build confidence.</p>
+              <p className="text-gray-500 mt-2">
+                {lang === 'es'
+                  ? 'Diseñado para eliminar el estrés y construir confianza a tu propio ritmo'
+                  : 'Designed to eliminate stress and build confidence.'
+                }
+              </p>
             </div>
 
             {/* Main Benefit Card */}
@@ -31,7 +37,12 @@ export default function DetailsSection({ whyThisWorks, whoWeAreLookingFor }: Det
                 </span>
                 {whyThisWorks.benefits[0]}
               </h3>
-              <p className="text-gray-600 relative z-10">Relax and learn without judgment. The AI waits for you to finish your thought, no matter how long it takes.</p>
+              <p className="text-gray-600 relative z-10">
+                {lang === 'es'
+                  ? 'Aprende sin juicios. La IA espera a que termines tu idea, sin importar cuánto tiempo necesites.'
+                  : 'Relax and learn without judgment. The AI waits for you to finish your thought, no matter how long it takes.'
+                }
+              </p>
             </div>
 
             {/* Split Bento Items */}
@@ -43,7 +54,12 @@ export default function DetailsSection({ whyThisWorks, whoWeAreLookingFor }: Det
                   </svg>
                 </div>
                 <h3 className="text-lg font-bold text-gray-900 mb-2">{whyThisWorks.benefits[1]}</h3>
-                <p className="text-gray-600 text-sm">Hear every word clearly. Adjust the speed to your liking.</p>
+                <p className="text-gray-600 text-sm">
+                  {lang === 'es'
+                    ? 'Escucha cada palabra claramente. También podrás leer la transcripción.'
+                    : 'Hear every word clearly. Adjust the speed to your liking.'
+                  }
+                </p>
               </div>
               <div className="bento-card bg-white p-6 rounded-2xl shadow-sm border border-gray-100 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-emerald-200">
                 <div className="w-12 h-12 rounded-xl bg-emerald-500 flex items-center justify-center mb-4 shadow-sm">
@@ -52,7 +68,12 @@ export default function DetailsSection({ whyThisWorks, whoWeAreLookingFor }: Det
                   </svg>
                 </div>
                 <h3 className="text-lg font-bold text-gray-900 mb-2">{whyThisWorks.benefits[3]}</h3>
-                <p className="text-gray-600 text-sm">Pick up exactly where you left off. It remembers your progress.</p>
+                <p className="text-gray-600 text-sm">
+                  {lang === 'es'
+                    ? 'Continúa justo donde lo dejaste. Recuerda todo tu progreso.'
+                    : 'Pick up exactly where you left off. It remembers your progress.'
+                  }
+                </p>
               </div>
             </div>
 
@@ -60,7 +81,12 @@ export default function DetailsSection({ whyThisWorks, whoWeAreLookingFor }: Det
             <div className="bento-card bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex items-center justify-between transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-emerald-200">
               <div>
                 <h3 className="text-lg font-bold text-gray-900">{whyThisWorks.benefits[2]}</h3>
-                <p className="text-gray-600 text-sm">Practice in the morning with coffee, or before bed.</p>
+                <p className="text-gray-600 text-sm">
+                  {lang === 'es'
+                    ? 'Practica por la mañana con el café, o antes de dormir.'
+                    : 'Practice in the morning with coffee, or before bed.'
+                  }
+                </p>
               </div>
               <div className="w-12 h-12 rounded-xl bg-emerald-500 flex items-center justify-center ml-4 shadow-sm flex-shrink-0">
                 <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -106,17 +132,18 @@ export default function DetailsSection({ whyThisWorks, whoWeAreLookingFor }: Det
                     </div>
                     <div>
                       <strong className={`block text-lg ${index === 0 ? 'text-emerald-300' : 'text-white'}`}>{criterion}</strong>
-                      {index === 0 && <span className="text-gray-400 text-sm">We are specifically studying senior learning patterns.</span>}
-                      {index === 1 && <span className="text-gray-400 text-sm">Required for the current phase of research.</span>}
-                      {index === 2 && <span className="text-gray-400 text-sm">iPhone or Android device required.</span>}
-                      {index === 3 && <span className="text-gray-400 text-sm">Willing to try the app and provide feedback.</span>}
                     </div>
                   </li>
                 ))}
               </ul>
 
               <div className="mt-8 pt-6 border-t border-gray-700">
-                <p className="text-sm text-gray-400 italic">"Learning English: Any level welcome, from beginner to advanced."</p>
+                <p className="text-sm text-gray-400 italic">
+                  {lang === 'es'
+                    ? '"Aprendiendo inglés: Cualquier nivel bienvenido, desde principiante hasta avanzado."'
+                    : '"Learning English: Any level welcome, from beginner to advanced."'
+                  }
+                </p>
               </div>
             </div>
           </div>

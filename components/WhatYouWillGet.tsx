@@ -15,7 +15,6 @@ export default function WhatYouWillGet({ content }: WhatYouWillGetProps) {
           >
             {content.title}
           </h2>
-          <p className="text-gray-400 mt-4 max-w-2xl mx-auto">Join our exclusive pilot program and receive premium benefits at no cost.</p>
         </div>
 
         <div className="grid md:grid-cols-4 gap-6">
@@ -47,12 +46,6 @@ export default function WhatYouWillGet({ content }: WhatYouWillGetProps) {
                 )}
               </div>
               <h3 className="text-lg font-bold text-emerald-300 mb-2">{benefit}</h3>
-              <p className="text-gray-400 text-sm">
-                {index === 0 && 'Full access to all premium features for the entire duration of the study.'}
-                {index === 1 && '1-on-1 session to help you get set up and comfortable with the technology.'}
-                {index === 2 && 'Direct line to our team for any technical or language questions you have.'}
-                {index === 3 && 'Your participation directly helps PhD research on senior learning.'}
-              </p>
             </div>
           ))}
         </div>
