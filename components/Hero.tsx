@@ -28,7 +28,10 @@ export default function Hero({ content, lang }: HeroProps) {
         <div className="max-w-3xl text-white py-10 px-6 sm:px-0">
           {/* Tagline */}
           <p className="text-lg font-medium tracking-wider uppercase text-emerald-300 mb-4 drop-shadow-md">
-            AI-Powered English Conversation Practice for Senior Learners
+            {lang === 'es'
+              ? 'Práctica de Conversación en Inglés con IA para Adultos Mayores'
+              : 'AI-Powered English Conversation Practice for Senior Learners'
+            }
           </p>
 
           {/* Headline */}
